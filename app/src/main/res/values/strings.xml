@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyCocktailsApp</string>
+    <string name="buttonToSearchPage">Button</string>
+    <string name="about_text">Cocktail App</string>
+</resources>
