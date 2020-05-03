@@ -24,19 +24,19 @@ public class SearchActivity extends AppCompatActivity {
 
         NetworkService.getInstance()
                 .getJSONApi()
-                .getDrinkByName("Margarita")
+                .getDrinkByName("margarita")
                 .enqueue(new Callback<Drink>() {
                     @Override
                     public void onResponse(@NonNull Call<Drink> call,@NonNull Response<Drink> response) {
                         Drink drink = response.body();
 
-                        textView.append(drink.getStrDrink()+"\n");
+                        textView.append(" "+drink.getStrDrink()+"\n");
 
                     }
 
                     @Override
                     public void onFailure(@NonNull Call<Drink> call,@NonNull Throwable t) {
-                        textView.append("Error sorry gay");
+                        textView.append(" Error sorry gay");
                         t.printStackTrace();
                     }
                 });
