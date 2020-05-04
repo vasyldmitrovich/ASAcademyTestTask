@@ -18,4 +18,10 @@ public class DrinkList {
         this.drinks = drinks;
     }
 
+    @Override
+    public String toString() {
+        return "DrinkList{" +
+                "drinks=" + drinks +
+                '}';
+    }
 }

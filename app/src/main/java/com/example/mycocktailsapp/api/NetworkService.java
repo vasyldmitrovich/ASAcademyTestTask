@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class NetworkService {
     private static NetworkService networkService;
-    private static final String BASE_URL = "https://www.thecocktaildb.com";
+    private static final String BASE_URL = "https://www.thecocktaildb.com/api/json/v1/1/";
     private Retrofit retrofit;
 
     private NetworkService() {
