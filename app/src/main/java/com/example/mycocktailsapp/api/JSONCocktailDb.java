@@ -10,4 +10,5 @@ public interface JSONCocktailDb {
 
     @GET("search.php")
     Call<DrinkList> getDrinkList (@Query("s") String string);
+
 }
