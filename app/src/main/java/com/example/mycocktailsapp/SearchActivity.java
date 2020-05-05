@@ -23,11 +23,16 @@ public class SearchActivity extends AppCompatActivity {
     List<Drink> drinkList;
     RecyclerView recyclerView;
     RecyclerAdapter recyclerAdapter;
+    String addToLink;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+
+        Bundle arguments = getIntent().getExtras();
+        addToLink = arguments.get("s").toString().toLowerCase();
 
         drinkList = new ArrayList<>();
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
@@ -37,8 +42,7 @@ public class SearchActivity extends AppCompatActivity {
         recyclerAdapter = new RecyclerAdapter(getApplicationContext(), drinkList);
         recyclerView.setAdapter(recyclerAdapter);
 
-        //TODO instead string "margarita" in next line. I am doing search bar and input data from them
-        Call<DrinkList> call = NetworkService.getInstance().getJSONApi().getDrinkList("margarita");
+        Call<DrinkList> call = NetworkService.getInstance().getJSONApi().getDrinkList(addToLink);
         call.enqueue(new Callback<DrinkList>() {
             @Override
             public void onResponse(Call<DrinkList> call, Response<DrinkList> response) {

@@ -1,4 +1,5 @@
 <resources>
     <string name="buttonToSearchPage">Button</string>
     <string name="about_text">Cocktail App</string>
+    <string name="search_hint">InputSearch</string>
 </resources>

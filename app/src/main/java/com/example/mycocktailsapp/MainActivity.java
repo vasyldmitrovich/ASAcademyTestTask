@@ -1,17 +1,19 @@
 package com.example.mycocktailsapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener {
 
+    EditText editText;
     ImageView imageViewSearch;
+    String inputText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         switch (v.getId()) {
             case R.id.imageViewSearch:
                 Intent intent = new Intent(this,SearchActivity.class);
+                editText = (EditText) findViewById(R.id.editTextInput);
+                inputText = editText.getText().toString().toLowerCase();
+
+                intent.putExtra("s",inputText);
                 startActivity(intent);
                 break;
             default:
