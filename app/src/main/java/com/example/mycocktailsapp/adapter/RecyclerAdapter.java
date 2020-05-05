@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-
+import com.example.mycocktailsapp.R;
 import com.example.mycocktailsapp.model.Drink;
 
 import java.util.List;

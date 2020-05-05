@@ -25,6 +25,10 @@
         <activity android:name=".MainActivity" >
 
         </activity>
+        <activity android:name=".AdapterRecyclerview">
+
+        </activity>
+
     </application>
 
 </manifest>
